@@ -59,9 +59,9 @@ class Cart {
           <div class="flex-row justify-between">
               <p>${cyrName}</p>
             <div class="flex-row gap-05 align-center card">
-            <span class="material-symbols-outlined icon-20 _add_amount"  data-name="${name}">add</span>
+            <img src="/icons/add-24.svg" class="svg-icon-24 _add_amount" data-name="${name}" alt="icon">
             <p>${amount}</p>
-            <span class="material-symbols-outlined icon-20 _remove_amount"  data-name="${name}">remove</span>
+            <img src="/icons/remove-24.svg" class="svg-icon-24 _remove_amount" data-name="${name}" alt="icon">
             </div>
           </div>
         </div>
@@ -120,6 +120,14 @@ class Cart {
 
   proxyRequest = async (dataObj) => {
     //    Checks
+    let cartStatus = () => {
+      return !this.products.every((obj) => obj.amount === 0)
+    }
+    if (cartStatus() === false) {
+      document.querySelector('._global_error').textContent =
+        'Немате Продукти во Кошничка'
+      return
+    }
     let formStatus = this.checkForm(dataObj)
     if (formStatus == false) {
       document.querySelector('._global_error').textContent =

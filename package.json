@@ -19,6 +19,7 @@
   ],
   "dependencies": {
     "cors": "^2.8.5",
-    "firebase-functions": "^5.0.1"
+    "firebase-functions": "^5.0.1",
+    "playwright": "^1.44.1"
   }
 }

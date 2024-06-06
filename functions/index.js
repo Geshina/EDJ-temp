@@ -52,18 +52,17 @@ function genDetails1(data) {
     .join(', ')
 }
 
-function genDetails2() {
-  return Math.random().toString(36).substring(2, 14)
+function genDetails2(data) {
+  return Object.values(data.form).join(', ')
 }
 
 function formatMap(details1, details2, total, cleanData) {
   return {
-    // AmountToPay: total * 100,
-    AmountToPay: 1 * 100,
+    AmountToPay: total * 100,
+    // AmountToPay: 1 * 100,
     AmountCurrency: 'MKD',
     Details1: details1,
-    // Details2: details2, // Unique payment reference
-    Details2: 'Тёст Strîñğ', // Unique payment reference
+    Details2: details2, // Unique payment reference
     PayToMerchant: 1000002294,
     MerchantName: 'DJUSIFAJ DOO',
     PaymentOKURL: 'https://eclatdejus.com/success',
@@ -117,7 +116,7 @@ function generateChecksumData(formData, checksumKey) {
 exports.preparePayment = onCall(
   { cors: 'https://eclatdejus.com' },
   (request) => {
-    const key = 'TEST_PASS'
+    const key = '45PsNsz4AuzuZAq4c1hfGVF26JTzGv9j'
     const productMap = {
       Two_Day_Signature: 2000,
       Three_Day_Signature: 2850,
