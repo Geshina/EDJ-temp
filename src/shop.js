@@ -59,9 +59,9 @@ class Cart {
           <div class="flex-row justify-between">
               <p>${cyrName}</p>
             <div class="flex-row gap-05 align-center card">
-            <img src="/icons/add-24.svg" class="svg-icon-24 _add_amount" data-name="${name}" alt="icon">
-            <p>${amount}</p>
             <img src="/icons/remove-24.svg" class="svg-icon-24 _remove_amount" data-name="${name}" alt="icon">
+            <p class="bold">${amount}</p>
+            <img src="/icons/add-24.svg" class="svg-icon-24 _add_amount" data-name="${name}" alt="icon">
             </div>
           </div>
         </div>
