@@ -19,16 +19,18 @@
     <h6 class="font-alt border-bottom">Достави на</h6>
     <form id="deliveryInfo" class=" flex-column gap-05" autocomplete="on">
       <label for="full_name" title="Please enter your full name">Име и Презиме</label>
-      <input name="full_name" type="text" class="card form" required autocomplete="name">
+      <input name="full_name" placeholder="Стефан Стефановски" type="text" class="card form" required
+        autocomplete="name">
 
-      <label for="Address" title="Please enter your address">Адреса</label>
-      <input name="Address" type="text" class="card form" required autocomplete="street-address">
+      <label for="Address" title="Please enter your address">Адреса со град</label>
+      <input name="Address" type="text" placeholder="Улица бр 12 Скопје" class="card form" required
+        autocomplete="street-address">
 
       <label for="Email" title="Please enter your email address">Е-мејл</label>
-      <input name="Email" type="email" class="card form" required autocomplete="email">
+      <input name="Email" type="email" placeholder="stefan@email.com" class="card form" required autocomplete="email">
 
       <label for="Phone" title="Please enter your phone number">Телефонски Број</label>
-      <input name="Phone" type="tel" class="card form" required autocomplete="tel">
+      <input name="Phone" type="tel" placeholder="+389 75 123 123" class="card form" required autocomplete="tel">
     </form>
 
 
